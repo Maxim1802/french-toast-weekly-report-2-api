@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["CM.WeeklyTeamReport.WebAPI.csproj", "src/CM.WeeklyTeamReport.WebAPI/"]
-#COPY ["src/CM.WeeklyTeamReport.WebAPI/CM.WeeklyTeamReport.WebAPI.csproj", "src/CM.WeeklyTeamReport.WebAPI/"]
+#COPY ["CM.WeeklyTeamReport.WebAPI.csproj", "src/CM.WeeklyTeamReport.WebAPI/"]
+COPY ["src/CM.WeeklyTeamReport.WebAPI/CM.WeeklyTeamReport.WebAPI.csproj", "src/CM.WeeklyTeamReport.WebAPI/"]
 RUN dotnet restore "src/CM.WeeklyTeamReport.WebAPI/CM.WeeklyTeamReport.WebAPI.csproj"
 COPY . .
 WORKDIR "/src/src/CM.WeeklyTeamReport.WebAPI"
