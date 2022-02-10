@@ -6,6 +6,11 @@ pipeline {
         kind: Pod
         spec:
           containers:
+          - name: cli
+            image: amazon/aws-cli
+            command:
+            - cat
+            tty: true
           - name: docker
             image: docker:19.03.1-dind
             securityContext:
