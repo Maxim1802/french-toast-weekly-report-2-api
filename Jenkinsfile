@@ -22,7 +22,6 @@ pipeline {
       steps {
         container('cli') {
           sh 'aws ecr get-login-password --region us-west-2 > mytoken.txt'
-          sh 'aws ecr-private create-repository --repository-name trogaev-app-backend'
         }
       }
     }
