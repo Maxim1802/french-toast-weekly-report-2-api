@@ -62,6 +62,10 @@ namespace CM.WeeklyTeamReport.WebAPI
                     {
                         builder.WithOrigins("https://weekly-report-02.digitalocean.ankocorp.com",
                                             "https://159.89.32.198",
+                                            "https://54.70.231.23.nip.io",
+                                            "http://54.70.231.23.nip.io",
+                                            "https://54.70.231.23.nip.io/api",
+                                            "http://54.70.231.23.nip.io/api",
                                             // For local tests
                                             "https://localhost:5001",
                                             "http://localhost:3000")
